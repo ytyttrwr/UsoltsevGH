@@ -1,0 +1,120 @@
+﻿<Window x:Class="OxtaPark.AddOrder"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:OxtaPark"
+        mc:Ignorable="d"
+        Title="AddOrder" Height="450" Width="850" WindowStartupLocation="CenterScreen">
+    <Window.Resources>
+        <LinearGradientBrush x:Key="d" StartPoint="1,0.2" EndPoint="1,1" >
+            <GradientStop  Color="#5CB" Offset="0.0"/>
+            <GradientStop  Color="#2F2FA2" Offset="1.1"/>
+        </LinearGradientBrush>
+    </Window.Resources>
+    <Viewbox Stretch="Fill">
+
+
+        <Grid  Height="450" Width="850" Background="{StaticResource d}">
+            <TextBox SelectionChanged="searchtb_SelectionChanged" HorizontalAlignment="Left"  TextWrapping="Wrap" x:Name="searchtb" Text="" VerticalAlignment="Top" Width="120" Margin="339,22,0,0"/>
+
+            <Label Content="Код заказа:" Foreground="Black" FontWeight="Heavy" FontFamily="Comic Sans MS" FontSize="22" HorizontalAlignment="Left" Margin="538,75,0,0" VerticalAlignment="Top"/>
+            <Button Content="Добавить заказ" FontSize="20" FontFamily="Comic Sans MS" x:Name="Add" Background="#76E383" Click="Add_Click"  HorizontalAlignment="Center" Margin="0,362,0,0" VerticalAlignment="Top" Height="40" Width="280" >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="15"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+
+            <Button Content="Отмена" FontSize="20" FontFamily="Comic Sans MS" x:Name="Exit" Background="#76E383" Click="Exit_Click"  HorizontalAlignment="Left" Margin="606,363,0,0" VerticalAlignment="Top" Height="39" Width="234" >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="15"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+
+            <Label Content="Выберите клиента ⇩" Foreground="Black" FontWeight="Heavy" FontFamily="Comic Sans MS" FontSize="22" HorizontalAlignment="Left" Margin="0,7,0,0" VerticalAlignment="Top"/>
+            <Label Content="Услуги:" Foreground="Black" FontWeight="Heavy" FontFamily="Comic Sans MS" FontSize="22" HorizontalAlignment="Left" Margin="21,242,0,0" VerticalAlignment="Top"/>
+            <Label Content="Код клиента:" Foreground="Black" FontWeight="Heavy" FontFamily="Comic Sans MS" FontSize="22" HorizontalAlignment="Left" Margin="528,140,0,0" VerticalAlignment="Top"/>
+            <Label Content="Поиск:" Foreground="Black" FontWeight="Heavy" FontFamily="Comic Sans MS" FontSize="22" HorizontalAlignment="Left" Margin="250,7,0,0" VerticalAlignment="Top"/>
+
+            <Label Content="Дата закрытия:" Foreground="Black" FontWeight="Heavy" FontFamily="Comic Sans MS" FontSize="22" HorizontalAlignment="Left" Margin="496,294,0,0" VerticalAlignment="Top"/>
+            <Label Content="Время проката:" Foreground="Black" FontWeight="Heavy" FontFamily="Comic Sans MS" FontSize="22" HorizontalAlignment="Left" Margin="495,248,0,0" VerticalAlignment="Top"/>
+            <DatePicker x:Name="Datepick" HorizontalAlignment="Left" Margin="679,306,0,0" VerticalAlignment="Top"/>
+
+
+            <DataGrid  SelectionChanged="DgClient_SelectionChanged" BorderBrush="White" BorderThickness="2"  FontSize="15"  CanUserResizeColumns="False" CanUserResizeRows="False"  Background="LavenderBlush" x:Name="DgClient" AutoGenerateColumns="False" Margin="21,53,331,0" Height="174" VerticalAlignment="Top">
+                <DataGrid.Resources>
+                    <!-- Стиль для заголовков столбцов -->
+                    <Style x:Name="daf" TargetType="DataGridColumnHeader">
+                        <Setter Property="Background" Value="Black"/>
+                        <Setter Property="Foreground" Value="White"/>
+                        <Setter Property="FontWeight" Value="ExtraBold"/>
+                        <Setter Property="Padding" Value="5"/>
+
+                    </Style>
+                    <Style TargetType="DataGridCell">
+                        <Setter Property="Padding" Value="5"/>
+                    </Style>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="3"/>
+                    </Style>
+
+                </DataGrid.Resources>
+
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Фамилия" Binding="{Binding Lastname }"/>
+                    <DataGridTextColumn Header="Имя" Binding="{Binding Name}"/>
+                    <DataGridTextColumn Header="Код" Binding="{Binding CodeClient}"/>
+                    <DataGridTextColumn Header="Паспорт" Binding="{Binding Passport}"/>
+
+
+                </DataGrid.Columns>
+            </DataGrid>
+
+            <Button Content="Добавить клиента" FontSize="20" FontFamily="Comic Sans MS" x:Name="clientadd" Background="#76E383" Click="clientadd_Click"  HorizontalAlignment="Left" Margin="515,10,0,0" VerticalAlignment="Top" Height="38" Width="198" RenderTransformOrigin="0.5,0.5" >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="15"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <TextBox HorizontalAlignment="Left" Margin="674,262,0,0" TextWrapping="Wrap" Text="" x:Name="Timetb" VerticalAlignment="Top" Width="120"/>
+            <TextBox HorizontalAlignment="Left" Margin="682,154,0,0" TextWrapping="Wrap" Text="" x:Name="checkclient" VerticalAlignment="Top" Width="120"/>
+            <TextBox HorizontalAlignment="Left" Margin="679,90,0,0" TextWrapping="Wrap" Text="" x:Name="CodeOrdertb" VerticalAlignment="Top" Width="120"/>
+
+            <Button  FontSize="20" FontFamily="Comic Sans MS" BorderBrush="Transparent" x:Name="addservice" Background="Transparent" Click="addservice_Click"  HorizontalAlignment="Left" Margin="117,248,0,0" VerticalAlignment="Top" Width="35" Height="35" RenderTransformOrigin="0.5,0.5" >
+                <StackPanel Orientation="Horizontal">
+                    <Image Stretch="Fill" Source="Image/add.png" Width="28" Height="27"/>
+
+                </StackPanel>
+            </Button>
+            <ComboBox SelectedItem="{Binding Service}" Name="CbService1" HorizontalAlignment="Left" Margin="166,248,0,0" VerticalAlignment="Top" Height="23" Width="145"  >
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding NameService}"/>
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
+
+            <ComboBox SelectedItem="{Binding Service}" Name="CbService2" Visibility="Collapsed" HorizontalAlignment="Left" Margin="14,296,0,0" VerticalAlignment="Top" Height="23" Width="145">
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding NameService}"/>
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
+
+            <ComboBox SelectedItem="{Binding Service}" Name="CbService3" Visibility="Collapsed" HorizontalAlignment="Left" Margin="166,296,0,0" VerticalAlignment="Top" Height="23" Width="145" >
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding NameService}"/>
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
+
+        </Grid>
+    </Viewbox>
+</Window>

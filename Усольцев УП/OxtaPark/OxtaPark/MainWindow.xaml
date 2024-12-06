@@ -1,0 +1,49 @@
+﻿<Window x:Class="OxtaPark.MainWindow" Icon="Image/logo.png"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:OxtaPark"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="550" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <Window.Resources>
+        <LinearGradientBrush x:Key="d" StartPoint="1,0.2" EndPoint="1,1" >
+            <GradientStop  Color="#5CB" Offset="0.0"/>
+            <GradientStop  Color="#2F2FA2" Offset="1.1"/>
+        </LinearGradientBrush>
+    </Window.Resources>
+    <Grid Background="{StaticResource d}" >
+        <Button Content="Войти" FontSize="20" FontFamily="Comic Sans MS" x:Name="Enter" Background="#76E383" HorizontalAlignment="Center" Margin="0,366,0,0" VerticalAlignment="Top" Height="39" Width="136" Click="Enter_Click">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Label Content="Вход в систему" FontFamily="Comic Sans MS" Foreground="#498C51" FontWeight="ExtraBold" FontSize="25" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top"/>
+        <Label Content="Логин:" Foreground="#498C51" FontWeight="Heavy"   FontFamily="Comic Sans MS" FontSize="20" HorizontalAlignment="Left" Margin="113,86,0,0" VerticalAlignment="Top"/>
+        <Label Content="Пароль:" Foreground="#498C51" FontWeight="Heavy"   FontFamily="Comic Sans MS" FontSize="20" HorizontalAlignment="Left" Margin="99,138,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" x:Name="Logintb" Margin="216,96,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox HorizontalAlignment="Left" x:Name="PasswordTb" Visibility="Collapsed"  Margin="216,148,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <PasswordBox x:Name="Passwordbox" HorizontalAlignment="Left" Margin="216,148,0,0" VerticalAlignment="Top" Width="120"/>
+        <Button FontWeight="Heavy"  FontSize="14" x:Name="skrit" Content="Показать пароль" Foreground="#498C51"  FontFamily="Comic Sans MS" Background="Transparent" BorderBrush="Transparent" HorizontalAlignment="Left" Margin="336,145,0,0" VerticalAlignment="Top" Height="23" Width="122" Click="Button_Click"/>
+
+        <WrapPanel x:Name="Captcha" Width="366" HorizontalAlignment="Center" Visibility="Hidden" Margin="0,195,0,81" >
+            <Image Width="200" Height="75" x:Name="captchaImage" Margin="80,0,10,0"/>
+            <TextBox x:Name="captchaTextBox"  BorderBrush="Black" Margin="90,0,0,0" BorderThickness="1" Width="150" Height="30" FontSize="21" />
+            <Button x:Name="updateCaptchaButton" Background="White" FontWeight="Bold" Content="↻" FontSize="20" Width="30" Height="30" Click="UpdateCaptchaButton_Click"/>
+        </WrapPanel>
+
+
+        <Border Opacity="0.5" Background="Red" Visibility="Hidden" x:Name="LockoutBorder">
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Label Content="Блокировка" Foreground="White" FontSize="50" FontWeight="Bold" HorizontalAlignment="Center"/>
+                <Label Content="Попробуйте снова через" HorizontalAlignment="Center" Foreground="White" FontSize="23" FontWeight="Bold"/>
+                <Label x:Name="lockoutTimerLabel" Content="10" HorizontalAlignment="Center" FontSize="23" FontWeight="Bold" Foreground="White"/>
+            </StackPanel>
+
+        </Border>
+        <Rectangle x:Name="rect" Visibility="Collapsed" HorizontalAlignment="Center" Height="155" Margin="0,181,0,0" Stroke="Black" VerticalAlignment="Top" Width="244"/>
+
+    </Grid>
+</Window>

@@ -1,0 +1,86 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\\u042E\u0440\u0438\u0439\\Desktop\\\u041F\u0420\u0410\u041A\u0422\u0418\u041A\u0410 \u0411\u0420\u042E\u0425\u0410\u041D\u041E\u0412\u0410\\ProgaOxta\\OxtaPark\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{5F68593B-9EFB-4DEA-8C24-74673B0D7C13}|OxtaPark\\OxtaPark.csproj|c:\\users\\\u044E\u0440\u0438\u0439\\desktop\\\u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0430 \u0431\u0440\u044E\u0445\u0430\u043D\u043E\u0432\u0430\\progaoxta\\oxtapark\\oxtapark\\loginhistory.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F68593B-9EFB-4DEA-8C24-74673B0D7C13}|OxtaPark\\OxtaPark.csproj|solutionrelative:oxtapark\\loginhistory.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F68593B-9EFB-4DEA-8C24-74673B0D7C13}|OxtaPark\\OxtaPark.csproj|c:\\users\\\u044E\u0440\u0438\u0439\\desktop\\\u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0430 \u0431\u0440\u044E\u0445\u0430\u043D\u043E\u0432\u0430\\progaoxta\\oxtapark\\oxtapark\\loginhistory.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{5F68593B-9EFB-4DEA-8C24-74673B0D7C13}|OxtaPark\\OxtaPark.csproj|solutionrelative:oxtapark\\loginhistory.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F68593B-9EFB-4DEA-8C24-74673B0D7C13}|OxtaPark\\OxtaPark.csproj|c:\\users\\\u044E\u0440\u0438\u0439\\desktop\\\u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0430 \u0431\u0440\u044E\u0445\u0430\u043D\u043E\u0432\u0430\\progaoxta\\oxtapark\\oxtapark\\addorder.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F68593B-9EFB-4DEA-8C24-74673B0D7C13}|OxtaPark\\OxtaPark.csproj|solutionrelative:oxtapark\\addorder.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F68593B-9EFB-4DEA-8C24-74673B0D7C13}|OxtaPark\\OxtaPark.csproj|c:\\users\\\u044E\u0440\u0438\u0439\\desktop\\\u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0430 \u0431\u0440\u044E\u0445\u0430\u043D\u043E\u0432\u0430\\progaoxta\\oxtapark\\oxtapark\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{5F68593B-9EFB-4DEA-8C24-74673B0D7C13}|OxtaPark\\OxtaPark.csproj|solutionrelative:oxtapark\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "App.xaml",
+              "DocumentMoniker": "C:\\Users\\\u042E\u0440\u0438\u0439\\Desktop\\\u041F\u0420\u0410\u041A\u0422\u0418\u041A\u0410 \u0411\u0420\u042E\u0425\u0410\u041D\u041E\u0412\u0410\\ProgaOxta\\OxtaPark\\OxtaPark\\App.xaml",
+              "RelativeDocumentMoniker": "OxtaPark\\App.xaml",
+              "ToolTip": "C:\\Users\\\u042E\u0440\u0438\u0439\\Desktop\\\u041F\u0420\u0410\u041A\u0422\u0418\u041A\u0410 \u0411\u0420\u042E\u0425\u0410\u041D\u041E\u0412\u0410\\ProgaOxta\\OxtaPark\\OxtaPark\\App.xaml",
+              "RelativeToolTip": "OxtaPark\\App.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-12-06T15:18:23.734Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AddOrder.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\\u042E\u0440\u0438\u0439\\Desktop\\\u041F\u0420\u0410\u041A\u0422\u0418\u041A\u0410 \u0411\u0420\u042E\u0425\u0410\u041D\u041E\u0412\u0410\\ProgaOxta\\OxtaPark\\OxtaPark\\AddOrder.xaml.cs",
+              "RelativeDocumentMoniker": "OxtaPark\\AddOrder.xaml.cs",
+              "ToolTip": "C:\\Users\\\u042E\u0440\u0438\u0439\\Desktop\\\u041F\u0420\u0410\u041A\u0422\u0418\u041A\u0410 \u0411\u0420\u042E\u0425\u0410\u041D\u041E\u0412\u0410\\ProgaOxta\\OxtaPark\\OxtaPark\\AddOrder.xaml.cs",
+              "RelativeToolTip": "OxtaPark\\AddOrder.xaml.cs",
+              "ViewState": "AQIAAE8AAAAAAAAAAAA9wGAAAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-06T14:59:38.31Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "LoginHistory.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\\u042E\u0440\u0438\u0439\\Desktop\\\u041F\u0420\u0410\u041A\u0422\u0418\u041A\u0410 \u0411\u0420\u042E\u0425\u0410\u041D\u041E\u0412\u0410\\ProgaOxta\\OxtaPark\\OxtaPark\\LoginHistory.xaml.cs",
+              "RelativeDocumentMoniker": "OxtaPark\\LoginHistory.xaml.cs",
+              "ToolTip": "C:\\Users\\\u042E\u0440\u0438\u0439\\Desktop\\\u041F\u0420\u0410\u041A\u0422\u0418\u041A\u0410 \u0411\u0420\u042E\u0425\u0410\u041D\u041E\u0412\u0410\\ProgaOxta\\OxtaPark\\OxtaPark\\LoginHistory.xaml.cs",
+              "RelativeToolTip": "OxtaPark\\LoginHistory.xaml.cs",
+              "ViewState": "AQIAAEQAAAAAAAAAAADwv1EAAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-06T14:37:56.002Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "LoginHistory.xaml",
+              "DocumentMoniker": "C:\\Users\\\u042E\u0440\u0438\u0439\\Desktop\\\u041F\u0420\u0410\u041A\u0422\u0418\u041A\u0410 \u0411\u0420\u042E\u0425\u0410\u041D\u041E\u0412\u0410\\ProgaOxta\\OxtaPark\\OxtaPark\\LoginHistory.xaml",
+              "RelativeDocumentMoniker": "OxtaPark\\LoginHistory.xaml",
+              "ToolTip": "C:\\Users\\\u042E\u0440\u0438\u0439\\Desktop\\\u041F\u0420\u0410\u041A\u0422\u0418\u041A\u0410 \u0411\u0420\u042E\u0425\u0410\u041D\u041E\u0412\u0410\\ProgaOxta\\OxtaPark\\OxtaPark\\LoginHistory.xaml",
+              "RelativeToolTip": "OxtaPark\\LoginHistory.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-12-06T14:37:54.683Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
