@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="40061a754ef74d19a59e8a818923f759" Name="Diagram1" ZoomLevel="173">
+        <EntityTypeShape EntityType="OxtaPark3Model.Client" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="OxtaPark3Model.Employes" Width="1.5" PointX="8" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="OxtaPark3Model.HistoryEnter" Width="1.5" PointX="10.25" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="OxtaPark3Model.Orderr" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="OxtaPark3Model.OrderService" Width="1.5" PointX="5.25" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="OxtaPark3Model.Post" Width="1.5" PointX="5.75" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="OxtaPark3Model.Service" Width="1.5" PointX="3" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="OxtaPark3Model.StatusOrder" Width="1.5" PointX="0.75" PointY="1.625" IsExpanded="true" />
+        <AssociationConnector Association="OxtaPark3Model.FK__Employes__id_pos__398D8EEE" ManuallyRouted="false" />
+        <AssociationConnector Association="OxtaPark3Model.FK__HistoryEn__id_Em__3C69FB99" ManuallyRouted="false" />
+        <AssociationConnector Association="OxtaPark3Model.FK__Orderr__id_Statu__44FF419A" ManuallyRouted="false" />
+        <AssociationConnector Association="OxtaPark3Model.FK__OrderServ__id_Or__47DBAE45" ManuallyRouted="false" />
+        <AssociationConnector Association="OxtaPark3Model.FK__OrderServ__id_Se__48CFD27E" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

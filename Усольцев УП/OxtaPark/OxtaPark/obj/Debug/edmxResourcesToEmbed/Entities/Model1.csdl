@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="OxtaPark3Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Client">
+    <Key>
+      <PropertyRef Name="id_Client" />
+    </Key>
+    <Property Name="id_Client" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Lastname" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="Patronyme" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="CodeClient" Type="Int32" />
+    <Property Name="Passport" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Datebirth" Type="DateTime" Precision="0" />
+    <Property Name="Adress" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="Password" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Employes">
+    <Key>
+      <PropertyRef Name="id_Emp" />
+    </Key>
+    <Property Name="id_Emp" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Lastname" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="Patronyme" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="id_pos" Type="Int32" />
+    <Property Name="Login" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="Password" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Post" Relationship="Self.FK__Employes__id_pos__398D8EEE" FromRole="Employes" ToRole="Post" />
+    <NavigationProperty Name="HistoryEnter" Relationship="Self.FK__HistoryEn__id_Em__3C69FB99" FromRole="Employes" ToRole="HistoryEnter" />
+  </EntityType>
+  <EntityType Name="HistoryEnter">
+    <Key>
+      <PropertyRef Name="id_History" />
+    </Key>
+    <Property Name="id_History" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_Emplo" Type="Int32" />
+    <Property Name="datetimehistory" Type="DateTime" Precision="3" />
+    <Property Name="typeentry" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Employes" Relationship="Self.FK__HistoryEn__id_Em__3C69FB99" FromRole="HistoryEnter" ToRole="Employes" />
+  </EntityType>
+  <EntityType Name="Orderr">
+    <Key>
+      <PropertyRef Name="id_Order" />
+    </Key>
+    <Property Name="id_Order" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CodeOrder" Type="Int32" />
+    <Property Name="DateCreate" Type="DateTime" Precision="0" />
+    <Property Name="Timecreate" Type="Time" Precision="7" />
+    <Property Name="CodeClient" Type="Int32" />
+    <Property Name="id_Status" Type="Int32" />
+    <Property Name="DateClose" Type="DateTime" Precision="0" />
+    <Property Name="RentalTime" Type="Time" Precision="7" />
+    <NavigationProperty Name="StatusOrder" Relationship="Self.FK__Orderr__id_Statu__44FF419A" FromRole="Orderr" ToRole="StatusOrder" />
+    <NavigationProperty Name="OrderService" Relationship="Self.FK__OrderServ__id_Or__47DBAE45" FromRole="Orderr" ToRole="OrderService" />
+  </EntityType>
+  <EntityType Name="OrderService">
+    <Key>
+      <PropertyRef Name="id_OrderServ" />
+    </Key>
+    <Property Name="id_OrderServ" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_Order" Type="Int32" />
+    <Property Name="id_Servic" Type="Int32" />
+    <NavigationProperty Name="Orderr" Relationship="Self.FK__OrderServ__id_Or__47DBAE45" FromRole="OrderService" ToRole="Orderr" />
+    <NavigationProperty Name="Service" Relationship="Self.FK__OrderServ__id_Se__48CFD27E" FromRole="OrderService" ToRole="Service" />
+  </EntityType>
+  <EntityType Name="Post">
+    <Key>
+      <PropertyRef Name="id_post" />
+    </Key>
+    <Property Name="id_post" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NamePost" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Employes" Relationship="Self.FK__Employes__id_pos__398D8EEE" FromRole="Post" ToRole="Employes" />
+  </EntityType>
+  <EntityType Name="Service">
+    <Key>
+      <PropertyRef Name="id_Serv" />
+    </Key>
+    <Property Name="id_Serv" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NameService" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="codeservice" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Cost" Type="Decimal" Precision="19" Scale="4" />
+    <NavigationProperty Name="OrderService" Relationship="Self.FK__OrderServ__id_Se__48CFD27E" FromRole="Service" ToRole="OrderService" />
+  </EntityType>
+  <EntityType Name="StatusOrder">
+    <Key>
+      <PropertyRef Name="id_StatusOrd" />
+    </Key>
+    <Property Name="id_StatusOrd" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NameStatus" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Orderr" Relationship="Self.FK__Orderr__id_Statu__44FF419A" FromRole="StatusOrder" ToRole="Orderr" />
+  </EntityType>
+  <Association Name="FK__Employes__id_pos__398D8EEE">
+    <End Role="Post" Type="Self.Post" Multiplicity="0..1" />
+    <End Role="Employes" Type="Self.Employes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Post">
+        <PropertyRef Name="id_post" />
+      </Principal>
+      <Dependent Role="Employes">
+        <PropertyRef Name="id_pos" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HistoryEn__id_Em__3C69FB99">
+    <End Role="Employes" Type="Self.Employes" Multiplicity="0..1" />
+    <End Role="HistoryEnter" Type="Self.HistoryEnter" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employes">
+        <PropertyRef Name="id_Emp" />
+      </Principal>
+      <Dependent Role="HistoryEnter">
+        <PropertyRef Name="id_Emplo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Orderr__id_Statu__44FF419A">
+    <End Role="StatusOrder" Type="Self.StatusOrder" Multiplicity="0..1" />
+    <End Role="Orderr" Type="Self.Orderr" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="StatusOrder">
+        <PropertyRef Name="id_StatusOrd" />
+      </Principal>
+      <Dependent Role="Orderr">
+        <PropertyRef Name="id_Status" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__OrderServ__id_Or__47DBAE45">
+    <End Role="Orderr" Type="Self.Orderr" Multiplicity="0..1" />
+    <End Role="OrderService" Type="Self.OrderService" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Orderr">
+        <PropertyRef Name="id_Order" />
+      </Principal>
+      <Dependent Role="OrderService">
+        <PropertyRef Name="id_Order" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__OrderServ__id_Se__48CFD27E">
+    <End Role="Service" Type="Self.Service" Multiplicity="0..1" />
+    <End Role="OrderService" Type="Self.OrderService" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Service">
+        <PropertyRef Name="id_Serv" />
+      </Principal>
+      <Dependent Role="OrderService">
+        <PropertyRef Name="id_Servic" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="OxtaPark3Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Client" EntityType="Self.Client" />
+    <EntitySet Name="Employes" EntityType="Self.Employes" />
+    <EntitySet Name="HistoryEnter" EntityType="Self.HistoryEnter" />
+    <EntitySet Name="Orderr" EntityType="Self.Orderr" />
+    <EntitySet Name="OrderService" EntityType="Self.OrderService" />
+    <EntitySet Name="Post" EntityType="Self.Post" />
+    <EntitySet Name="Service" EntityType="Self.Service" />
+    <EntitySet Name="StatusOrder" EntityType="Self.StatusOrder" />
+    <AssociationSet Name="FK__Employes__id_pos__398D8EEE" Association="Self.FK__Employes__id_pos__398D8EEE">
+      <End Role="Post" EntitySet="Post" />
+      <End Role="Employes" EntitySet="Employes" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HistoryEn__id_Em__3C69FB99" Association="Self.FK__HistoryEn__id_Em__3C69FB99">
+      <End Role="Employes" EntitySet="Employes" />
+      <End Role="HistoryEnter" EntitySet="HistoryEnter" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Orderr__id_Statu__44FF419A" Association="Self.FK__Orderr__id_Statu__44FF419A">
+      <End Role="StatusOrder" EntitySet="StatusOrder" />
+      <End Role="Orderr" EntitySet="Orderr" />
+    </AssociationSet>
+    <AssociationSet Name="FK__OrderServ__id_Or__47DBAE45" Association="Self.FK__OrderServ__id_Or__47DBAE45">
+      <End Role="Orderr" EntitySet="Orderr" />
+      <End Role="OrderService" EntitySet="OrderService" />
+    </AssociationSet>
+    <AssociationSet Name="FK__OrderServ__id_Se__48CFD27E" Association="Self.FK__OrderServ__id_Se__48CFD27E">
+      <End Role="Service" EntitySet="Service" />
+      <End Role="OrderService" EntitySet="OrderService" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
